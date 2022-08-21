@@ -6,28 +6,29 @@ const Checkout = (props) => {
 	};
 
 	return (
-		<form onSubmit={confirmHandler}>
+		<form className={styles.form} onSubmit={confirmHandler}>
 			<div className={styles.control}>
-				<label htmlFor='name'>Your Name:</label>
-				<input type='text' id='name'></input>
+				<label htmlFor='name'>Your Name</label>
+				<input type='text' id='name' />
 			</div>
 			<div className={styles.control}>
-				<label htmlFor='street'>Street:</label>
-				<input type='text' id='street'></input>
+				<label htmlFor='street'>Street</label>
+				<input type='text' id='street' />
 			</div>
 			<div className={styles.control}>
-				<label htmlFor='postal'>Postal Code:</label>
-				<input type='text' id='postal'></input>
+				<label htmlFor='postal'>Postal Code</label>
+				<input type='text' id='postal' />
 			</div>
 			<div className={styles.control}>
-				<label htmlFor='city'>City:</label>
-				<input type='text' id='city'></input>
+				<label htmlFor='city'>City</label>
+				<input type='text' id='city' />
 			</div>
-			{/* Assign type='button' so the Cancel button does not submit form. */}
-			<button type='button' onClick={props.onCancel}>
-				Cancel
-			</button>
-			<button>Confirm</button>
+			<div className={styles.actions}>
+				<button type='button' onClick={props.onCancel}>
+					Cancel
+				</button>
+				<button className={styles.submit}>Confirm</button>
+			</div>
 		</form>
 	);
 };
